@@ -1,20 +1,23 @@
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# PLOT COLOR
+# Load data
 data = pd.read_csv("tips.csv")
 
-# Scatter plot with day against tip
-plt.scatter(data['day'], data['tip'], c=data['size'], 
-			s=data['total_bill'])
+# Create scatter plot
+fig, ax = plt.subplots()
+scatter = ax.scatter(data['day'], data['tip'], c=data['size'], s=data['total_bill'])
 
 # Adding Title to the Plot
-plt.title("Scatter Plot")
+ax.set_title("Scatter Plot")
 
 # Setting the X and Y labels
-plt.xlabel('Day')
-plt.ylabel('Tip')
+ax.set_xlabel('Day')
+ax.set_ylabel('Tip')
 
-plt.colorbar()
+# Add colorbar
+plt.colorbar(scatter, ax=ax)
 
-plt.show()
+# Show plot
+st.pyplot(fig)
