@@ -2,10 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #PLOT BIASA
-import pandas as pd
-import matplotlib.pyplot as plt
-
-
 # reading the database
 data = pd.read_csv("D:\\tips.csv")
 
