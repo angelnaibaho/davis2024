@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 #PLOT BIASA
 # reading the database
-data = pd.read_csv("D:\\tips.csv")
+data = pd.read_csv("tips.csv")
 
 # Scatter plot with day against tip
 plt.scatter(data['day'], data['tip'])
@@ -18,7 +18,7 @@ plt.ylabel('Tip')
 plt.show()
 
 #PLOT COLOR
-data = pd.read_csv("D:\\tips.csv")
+data = pd.read_csv("tips.csv")
 
 # Scatter plot with day against tip
 plt.scatter(data['day'], data['tip'], c=data['size'], 
