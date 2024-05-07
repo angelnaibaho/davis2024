@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+st.write("""# Data Visual""")
+st.write("""Anna Vita Angelina Naibaho - 21082010135""")
 # Load data
 data = pd.read_csv("tips.csv")
 
